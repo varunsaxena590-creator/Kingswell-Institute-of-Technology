@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Particles — Landing Page</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        overflow-x: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        cursor: none;
+      }
+
+      /* ── Particles canvas container ── */
+      #app {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+      }
+
+      /* ── Hero Section ── */
+      .hero {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 10;
+        pointer-events: none;
+        width: 90%;
+      }
+
+      .hero__tag {
+        display: inline-block;
+        font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #00f0ff;
+        border: 1px solid rgba(0, 240, 255, 0.4);
+        padding: 0.35em 1.2em;
+        border-radius: 999px;
+        margin-bottom: 1.6rem;
+        text-shadow: 0 0 8px #00f0ff;
+        box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+      }
+
+      .hero__title {
+        font-size: clamp(2.2rem, 7vw, 5.5rem);
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        line-height: 1.1;
+        text-shadow:
+          0 0 10px #00f0ff,
+          0 0 25px #00f0ff,
+          0 0 55px #0080ff,
+          0 0 100px #0040ff;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero__title span {
+        color: #00f0ff;
+      }
+
+      .hero__subtitle {
+        font-size: clamp(0.95rem, 2.5vw, 1.35rem);
+        color: #a0e8ff;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-shadow:
+          0 0 8px #00f0ff,
+          0 0 20px #0080ff;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero__cta {
+        display: inline-block;
+        padding: 0.75em 2.5em;
+        border: 2px solid #00f0ff;
+        border-radius: 999px;
+        color: #00f0ff;
+        font-size: clamp(0.85rem, 1.8vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        pointer-events: all;
+        cursor: none;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s, box-shadow 0.3s;
+        box-shadow:
+          0 0 12px rgba(0, 240, 255, 0.4),
+          inset 0 0 12px rgba(0, 240, 255, 0.05);
+      }
+
+      .hero__cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #00f0ff;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+        z-index: -1;
+      }
+
+      .hero__cta:hover {
+        color: #000;
+        box-shadow: 0 0 30px rgba(0, 240, 255, 0.8);
+      }
+
+      .hero__cta:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* ── Scroll hint ── */
+      .scroll-hint {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        z-index: 10;
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      .scroll-hint span {
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+        color: #00f0ff;
+        text-transform: uppercase;
+      }
+
+      .scroll-hint__line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, #00f0ff, transparent);
+        animation: scrollLine 1.6s ease-in-out infinite;
+      }
+
+      @keyframes scrollLine {
+        0%   { transform: scaleY(0); transform-origin: top; }
+        50%  { transform: scaleY(1); transform-origin: top; }
+        51%  { transform: scaleY(1); transform-origin: bottom; }
+        100% { transform: scaleY(0); transform-origin: bottom; }
+      }
+
+      /* ── Theme CSS Variables ── */
+      :root {
+        --c1: #00f0ff;
+        --c2: #0080ff;
+        --c3: #0040ff;
+        --cs: #a0e8ff;
+      }
+
+      /* ── Color Toggle Button ── */
+      .theme-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 20;
+        background: transparent;
+        border: 2px solid var(--c1);
+        border-radius: 999px;
+        color: var(--c1);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 0.55em 1.3em;
+        cursor: none;
+        transition: all 0.4s ease;
+        box-shadow: 0 0 12px rgba(0,240,255,0.3);
+      }
+
+      .theme-btn:hover {
+        background: var(--c1);
+        color: #000;
+        box-shadow: 0 0 28px var(--c1);
+      }
+
+      /* ── Responsive tweaks ── */
+      @media (max-width: 480px) {
+        .hero__tag  { letter-spacing: 0.2em; }
+        .hero__cta  { padding: 0.65em 1.8em; }
+        .theme-btn  { bottom: 1.2rem; right: 1rem; font-size: 0.68rem; }
+      }
+
+      /* ── Portfolio Section ── */
+      .portfolio-section {
+        position: relative;
+        z-index: 10;
+        min-height: 100vh;
+        padding: 6rem 2rem 4rem;
+        background: linear-gradient(to bottom, transparent, #050510 18%, #050510);
+      }
+
+      .portfolio-section .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .portfolio-section .section-header h2 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-shadow: 0 0 10px var(--c1), 0 0 30px var(--c2);
+      }
+
+      .portfolio-section .section-header p {
+        color: var(--cs);
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        opacity: 0.75;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto 2.5rem;
+      }
+
+      .project-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(0,240,255,0.15);
+        border-radius: 16px;
+        padding: 1.6rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        cursor: default;
+      }
+
+      .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: var(--accent, var(--c1));
+        box-shadow: 0 0 14px var(--accent, var(--c1));
+        border-radius: 3px 3px 0 0;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent, var(--c1));
+        box-shadow: 0 8px 32px rgba(0,240,255,0.12);
+      }
+
+      .project-card__name {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.02em;
+      }
+
+      .project-card__desc {
+        font-size: 0.84rem;
+        color: #8ca0b3;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        min-height: 2.5rem;
+      }
+
+      .project-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-card__tag {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        padding: 0.25em 0.75em;
+        border-radius: 999px;
+        background: rgba(0,240,255,0.08);
+        color: var(--accent, var(--c1));
+        border: 1px solid rgba(0,240,255,0.2);
+      }
+
+      .project-card__links {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 0.8rem;
+      }
+
+      .project-card__link {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.4em 1em;
+        border-radius: 999px;
+        border: 1px solid rgba(0,240,255,0.3);
+        color: var(--accent, var(--c1));
+        text-decoration: none;
+        transition: background 0.25s, color 0.25s;
+      }
+
+      .project-card__link:hover {
+        background: var(--accent, var(--c1));
+        color: #000;
+      }
+
+      .project-card__delete {
+        position: absolute;
+        top: 0.8rem;
+        right: 0.8rem;
+        background: transparent;
+        border: none;
+        color: rgba(255,255,255,0.2);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        padding: 0.2em;
+        line-height: 1;
+      }
+
+      .project-card__delete:hover { color: #ff4d6d; }
+
+      /* ── Add Project Button ── */
+      .add-project-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0 auto;
+        padding: 0.75em 2.5em;
+        border: 2px solid var(--c1);
+        border-radius: 999px;
+        color: var(--c1);
+        background: transparent;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 16px rgba(0,240,255,0.2);
+      }
+
+      .add-project-btn:hover {
+        background: var(--c1);
+        color: #000;
+        box-shadow: 0 0 30px rgba(0,240,255,0.5);
+      }
+
+      /* ── Modal Overlay ── */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.75);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        backdrop-filter: blur(6px);
+      }
+
+      .modal-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .modal {
+        background: #0d1a2a;
+        border: 1px solid rgba(0,240,255,0.25);
+        border-radius: 20px;
+        padding: 2rem;
+        width: 100%;
+        max-width: 480px;
+        box-shadow: 0 0 60px rgba(0,240,255,0.1);
+        transform: translateY(24px) scale(0.97);
+        transition: transform 0.35s cubic-bezier(.22,1,.36,1);
+      }
+
+      .modal-overlay.open .modal {
+        transform: translateY(0) scale(1);
+      }
+
+      .modal__header {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--c1);
+        letter-spacing: 0.06em;
+        margin-bottom: 1.4rem;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px var(--c1);
+      }
+
+      .modal__field {
+        width: 100%;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(0,240,255,0.18);
+        border-radius: 10px;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.9rem;
+        outline: none;
+        transition: border-color 0.25s, box-shadow 0.25s;
+        font-family: inherit;
+        resize: vertical;
+      }
+
+      .modal__field::placeholder { color: #4a6070; }
+
+      .modal__field:focus {
+        border-color: var(--c1);
+        box-shadow: 0 0 0 3px rgba(0,240,255,0.1);
+      }
+
+      .modal__submit {
+        width: 100%;
+        padding: 0.85em;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        color: #000;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 0.4rem;
+        transition: opacity 0.25s, box-shadow 0.25s;
+        box-shadow: 0 0 20px rgba(0,240,255,0.35);
+      }
+
+      .modal__submit:hover {
+        opacity: 0.88;
+        box-shadow: 0 0 32px rgba(0,240,255,0.55);
+      }
+
+      .modal__close {
+        float: right;
+        background: transparent;
+        border: none;
+        color: #4a6070;
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-top: -0.3rem;
+        transition: color 0.2s;
+      }
+
+      .modal__close:hover { color: #ff4d6d; }
+
+      /* ── Empty state ── */
+      .projects-empty {
+        text-align: center;
+        color: #3a5060;
+        font-size: 0.9rem;
+        padding: 3rem 0;
+        letter-spacing: 0.08em;
+      }
+
+      @media (max-width: 560px) {
+        .portfolio-section { padding: 5rem 1rem 3rem; }
+        .modal { padding: 1.4rem; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Particles target -->
+    <div id="app"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__tag">Experience the Future</div>
+      <h1 class="hero__title">Welcome to<br /><span>The Future</span></h1>
+      <p class="hero__subtitle">Next Generation Web Experience</p>
+      <a href="#" class="hero__cta">Explore Now</a>
+    </section>
+
+    <!-- Color Toggle Button -->
+    <button class="theme-btn" id="themeBtn">⬡ Neon Blue</button>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-hint__line"></div>
+    </div>
+
+    <!-- ══ Portfolio Section ══ -->
+    <section class="portfolio-section" id="portfolioSection" style="display:none">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <p>A showcase of things I've built</p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- cards injected by JS -->
+      </div>
+
+      <div class="projects-empty" id="projectsEmpty" style="display:none">
+        No projects yet — add your first one below.
+      </div>
+
+      <button class="add-project-btn" id="openModalBtn">+ Add Project</button>
+    </section>
+
+    <!-- ══ Add Project Modal ══ -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="modal__close" id="closeModalBtn" title="Close">&#x2715;</button>
+        <div class="modal__header">Add New Project</div>
+
+        <input  class="modal__field" id="pName"    type="text"  placeholder="Project Name" />
+        <textarea class="modal__field" id="pDesc"  rows="3"     placeholder="Description"></textarea>
+        <input  class="modal__field" id="pStack"   type="text"  placeholder="Tech stack (e.g. React, Node.js, MySQL)" />
+        <input  class="modal__field" id="pAccent"  type="text"  placeholder="Accent color (e.g. #20b2aa)" />
+        <input  class="modal__field" id="pLive"    type="url"   placeholder="Live URL" />
+        <input  class="modal__field" id="pGithub"  type="url"   placeholder="GitHub URL" />
+
+        <button class="modal__submit" id="submitProjectBtn">+ Add Project</button>
+      </div>
+    </div>
+
+    <!-- Particles Cursor (ES Module) -->
+    <script type="module">
+      import { particlesCursor } from
+        'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+      const themes = [
+        {
+          label:   '⬡ Neon Gold',
+          c1: '#ffd700', c2: '#ffaa00', c3: '#ff8800', cs: '#ffe88a',
+          particles: ['#ffd700', '#ffaa00', '#ff8800', '#ff6600'],
+          shadowRgb: '255,215,0',
+        },
+        {
+          label:   '⬡ Neon Blue',
+          c1: '#00f0ff', c2: '#0080ff', c3: '#0040ff', cs: '#a0e8ff',
+          particles: ['#00f0ff', '#0080ff', '#7000ff', '#ff00c8'],
+          shadowRgb: '0,240,255',
+        },
+      ]
+
+      let current = 0   // starts on Blue (index 1 shown first, so next is Gold)
+
+      function applyTheme(t) {
+        const root = document.documentElement.style
+        root.setProperty('--c1', t.c1)
+        root.setProperty('--c2', t.c2)
+        root.setProperty('--c3', t.c3)
+        root.setProperty('--cs', t.cs)
+
+        // text glows
+        const title    = document.querySelector('.hero__title')
+        const titleSpan= document.querySelector('.hero__title span')
+        const tag      = document.querySelector('.hero__tag')
+        const sub      = document.querySelector('.hero__subtitle')
+        const cta      = document.querySelector('.hero__cta')
+        const hintSpan = document.querySelector('.scroll-hint span')
+        const hintLine = document.querySelector('.scroll-hint__line')
+        const btn      = document.getElementById('themeBtn')
+
+        title.style.textShadow =
+          `0 0 10px ${t.c1}, 0 0 25px ${t.c1}, 0 0 55px ${t.c2}, 0 0 100px ${t.c3}`
+        titleSpan.style.color  = t.c1
+        tag.style.color        = t.c1
+        tag.style.borderColor  = t.c1 + '66'
+        tag.style.textShadow   = `0 0 8px ${t.c1}`
+        tag.style.boxShadow    = `0 0 12px rgba(${t.shadowRgb},0.2)`
+        sub.style.color        = t.cs
+        sub.style.textShadow   = `0 0 8px ${t.c1}, 0 0 20px ${t.c2}`
+        cta.style.borderColor  = t.c1
+        cta.style.color        = t.c1
+        cta.style.boxShadow    = `0 0 12px rgba(${t.shadowRgb},0.4), inset 0 0 12px rgba(${t.shadowRgb},0.05)`
+        hintSpan.style.color   = t.c1
+        hintLine.style.background = `linear-gradient(to bottom, ${t.c1}, transparent)`
+        btn.style.borderColor  = t.c1
+        btn.style.color        = t.c1
+        btn.style.boxShadow    = `0 0 12px rgba(${t.shadowRgb},0.3)`
+        btn.textContent        = t.label
+      }
+
+      function initParticles(t) {
+        const appEl = document.getElementById('app')
+        appEl.innerHTML = ''
+        particlesCursor({
+          el: appEl,
+          gpgpu: { size: 512 },
+          particles: {
+            alphaMap: null,
+            alphaTest: 0.5,
+            color: t.particles,
+            count: 5000,
+            depth: 20,
+            size: 0.05,
+          },
+        })
+      }
+
+      // Init with Blue
+      initParticles(themes[1])
+      applyTheme(themes[1])
+
+      document.getElementById('themeBtn').addEventListener('click', () => {
+        current = (current + 1) % themes.length
+        const t = themes[current]
+        applyTheme(t)
+        initParticles(t)
+      })
+    </script>
+
+    <!-- Portfolio / Projects Logic -->
+    <script>
+      // ── Default seed project ──
+      const SEED_PROJECTS = [
+        {
+          id: 'kingswell-2026',
+          name: 'Kingswell Institute of Technology',
+          desc: 'A professional, full-stack college management system featuring role-based authentication, an admin panel, student portal, real-time notifications, MCQ exams, fee management, library system, and Cloudinary image uploads.',
+          stack: 'React 18, Vite, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, JWT, Cloudinary',
+          accent: '#20b2aa',
+          live: '',
+          github: '',
+        },
+      ]
+
+      const STORAGE_KEY = 'neon_portfolio_projects'
+
+      function loadProjects() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY)
+          return raw ? JSON.parse(raw) : null
+        } catch { return null }
+      }
+
+      function saveProjects(projects) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(projects))
+      }
+
+      function hexToRgb(hex) {
+        const r = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+        return r ? `${parseInt(r[1],16)},${parseInt(r[2],16)},${parseInt(r[3],16)}` : '0,240,255'
+      }
+
+      function buildCard(p) {
+        const accent = p.accent || 'var(--c1)'
+        const rgb    = p.accent ? hexToRgb(p.accent) : '0,240,255'
+        const tags   = p.stack ? p.stack.split(',').map(s => s.trim()).filter(Boolean) : []
+
+        const linksHtml = [
+          p.live   ? `<a class="project-card__link" href="${escHtml(p.live)}"   target="_blank" rel="noopener">Live ↗</a>`   : '',
+          p.github ? `<a class="project-card__link" href="${escHtml(p.github)}" target="_blank" rel="noopener">GitHub ↗</a>` : '',
+        ].join('')
+
+        const tagsHtml = tags.slice(0, 6).map(t =>
+          `<span class="project-card__tag">${escHtml(t)}</span>`
+        ).join('')
+
+        const card = document.createElement('div')
+        card.className = 'project-card'
+        card.dataset.id = p.id
+        card.style.setProperty('--accent', accent)
+        card.style.setProperty('--accent-rgb', rgb)
+        card.innerHTML = `
+          <button class="project-card__delete" data-id="${escHtml(p.id)}" title="Remove">&times;</button>
+          <div class="project-card__name">${escHtml(p.name)}</div>
+          <div class="project-card__desc">${escHtml(p.desc)}</div>
+          ${tagsHtml ? `<div class="project-card__tags">${tagsHtml}</div>` : ''}
+          ${linksHtml ? `<div class="project-card__links">${linksHtml}</div>` : ''}
+        `
+        return card
+      }
+
+      function escHtml(str) {
+        return String(str ?? '')
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+          .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+      }
+
+      function renderProjects(projects) {
+        const grid  = document.getElementById('projectsGrid')
+        const empty = document.getElementById('projectsEmpty')
+        grid.innerHTML = ''
+        if (!projects.length) {
+          empty.style.display = 'block'
+          return
+        }
+        empty.style.display = 'none'
+        projects.forEach(p => {
+          const card = buildCard(p)
+          grid.appendChild(card)
+        })
+        // delete handlers
+        grid.querySelectorAll('.project-card__delete').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.dataset.id
+            projects = projects.filter(p => p.id !== id)
+            saveProjects(projects)
+            renderProjects(projects)
+          })
+        })
+      }
+
+      // ── Init ──
+      let projects = loadProjects()
+      if (!projects) {
+        projects = SEED_PROJECTS
+        saveProjects(projects)
+      }
+
+      // Show portfolio section only after hero is visible
+      const portfolioSection = document.getElementById('portfolioSection')
+
+      // Reveal portfolio when user scrolls past hero
+      function checkReveal() {
+        if (window.scrollY > window.innerHeight * 0.4) {
+          portfolioSection.style.display = 'block'
+          window.removeEventListener('scroll', checkReveal)
+        }
+      }
+      window.addEventListener('scroll', checkReveal)
+
+      // Also hook the CTA button
+      const ctaBtn = document.querySelector('.hero__cta')
+      if (ctaBtn) {
+        ctaBtn.textContent = 'View Projects'
+        ctaBtn.addEventListener('click', (e) => {
+          e.preventDefault()
+          portfolioSection.style.display = 'block'
+          portfolioSection.scrollIntoView({ behavior: 'smooth' })
+        })
+      }
+
+      renderProjects(projects)
+
+      // ── Modal ──
+      const overlay     = document.getElementById('modalOverlay')
+      const openBtn     = document.getElementById('openModalBtn')
+      const closeBtn    = document.getElementById('closeModalBtn')
+      const submitBtn   = document.getElementById('submitProjectBtn')
+
+      openBtn.addEventListener('click',  () => overlay.classList.add('open'))
+      closeBtn.addEventListener('click', () => overlay.classList.remove('open'))
+      overlay.addEventListener('click',  (e) => { if (e.target === overlay) overlay.classList.remove('open') })
+
+      submitBtn.addEventListener('click', () => {
+        const name   = document.getElementById('pName').value.trim()
+        const desc   = document.getElementById('pDesc').value.trim()
+        const stack  = document.getElementById('pStack').value.trim()
+        const accent = document.getElementById('pAccent').value.trim()
+        const live   = document.getElementById('pLive').value.trim()
+        const github = document.getElementById('pGithub').value.trim()
+
+        if (!name) {
+          document.getElementById('pName').focus()
+          return
+        }
+
+        const newProject = {
+          id: 'proj-' + Date.now(),
+          name, desc, stack,
+          accent: accent || 'var(--c1)',
+          live, github,
+        }
+
+        projects = [newProject, ...projects]
+        saveProjects(projects)
+        renderProjects(projects)
+        overlay.classList.remove('open')
+
+        // reset form
+        ;['pName','pDesc','pStack','pAccent','pLive','pGithub'].forEach(id => {
+          const el = document.getElementById(id)
+          el.value = ''
+        })
+      })
+
+      // Allow Enter key to submit from single-line fields
+      ;['pName','pStack','pAccent','pLive','pGithub'].forEach(id => {
+        document.getElementById(id).addEventListener('keydown', e => {
+          if (e.key === 'Enter') submitBtn.click()
+        })
+      })
+    </script>
+
+  </body>
+</html>

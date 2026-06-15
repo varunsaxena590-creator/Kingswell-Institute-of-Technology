@@ -1,0 +1,55 @@
+[2m9:41:42 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: D:\vs code\college\katapa-college\frontend\src\App.jsx: Identifier 'Notices' has already been declared. (58:7)
+
+[0m [90m 56 |[31m [36mimport[31m [33mUploadGallery[31m [36mfrom[31m [32m'./admin/UploadGallery'[31m[33m;[31m
+ [90m 57 |[31m [36mimport[31m [33mFees[31m [36mfrom[31m [32m'./admin/Fees'[31m[33m;[31m
+[31m[1m>[22m[31m[90m 58 |[31m [36mimport[31m [33mNotices[31m [36mfrom[31m [32m'./admin/Notices'[31m[33m;[31m
+ [90m    |[31m        [31m[1m^[22m[31m
+ [90m 59 |[31m [36mimport[31m [33mResults[31m [36mfrom[31m [32m'./admin/Results'[31m[33m;[31m
+ [90m 60 |[31m [36mimport[31m [33mAttendance[31m [36mfrom[31m [32m'./admin/Attendance'[31m[33m;[31m
+ [90m 61 |[31m [36mimport[31m [33mTimetable[31m [36mfrom[31m [32m'./admin/Timetable'[31m[33m;[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mD:/vs code/college/katapa-college/frontend/src/App.jsx[39m:58:7
+[33m  56 |  import UploadGallery from './admin/UploadGallery';
+  57 |  import Fees from './admin/Fees';
+  58 |  import Notices from './admin/Notices';
+     |         ^
+  59 |  import Results from './admin/Results';
+  60 |  import Attendance from './admin/Attendance';[39m
+      at constructor (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:365:19)
+      at JSXParserMixin.raise (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:6599:19)
+      at ScopeHandler.checkRedeclarationInScope (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:1619:19)
+      at ScopeHandler.declareName (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:1585:12)
+      at JSXParserMixin.declareNameFromIdentifier (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:7567:16)
+      at JSXParserMixin.checkIdentifier (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:7563:12)
+      at JSXParserMixin.checkLVal (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:7500:12)
+      at JSXParserMixin.finishImportSpecifier (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14266:10)
+      at JSXParserMixin.parseImportSpecifierLocal (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14263:31)
+      at JSXParserMixin.maybeParseDefaultImportSpecifier (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14366:12)
+      at JSXParserMixin.parseImportSpecifiersAndAfter (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14239:29)
+      at JSXParserMixin.parseImport (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14235:17)
+      at JSXParserMixin.parseStatementContent (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:12876:27)
+      at JSXParserMixin.parseStatementLike (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:12767:17)
+      at JSXParserMixin.parseModuleItem (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:12744:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:13316:36)
+      at JSXParserMixin.parseBlockBody (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:13309:10)
+      at JSXParserMixin.parseProgram (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:12622:10)
+      at JSXParserMixin.parseTopLevel (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:12612:25)
+      at JSXParserMixin.parse (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14488:25)
+      at parse (D:\vs code\college\katapa-college\frontend\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (D:\vs code\college\katapa-college\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (D:\vs code\college\katapa-college\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (D:\vs code\college\katapa-college\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (D:\vs code\college\katapa-college\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:261:32)
+      at D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:223:11)
+      at D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:189:28
+      at D:\vs code\college\katapa-college\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:113:33
+      at step (D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:287:14)
+      at D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (D:\vs code\college\katapa-college\frontend\node_modules\gensync\index.js:223:11)

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr>
+      <p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>
+      <p:sp>
+  <p:nvSpPr><p:cNvPr id="2" name="Background"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="12192000" cy="6858000"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="07111f"/></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="3" name="Top Accent"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="12192000" cy="95250"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="4" name="Section"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="514350" y="209550"/><a:ext cx="4000500" cy="266700"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1200" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Closure</a:t></a:r><a:endParaRPr lang="en-US" sz="1200"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="5" name="Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="514350" y="590550"/><a:ext cx="7239000" cy="666750"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="3100" b="1"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill><a:latin typeface="Aptos Display"/></a:rPr><a:t>Testing, Limitations, Future Scope, Conclusion</a:t></a:r><a:endParaRPr lang="en-US" sz="3100"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="6" name="Subtitle"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="533400" y="1200150"/><a:ext cx="7810500" cy="438150"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="A7B4C8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Final evaluation and next development direction</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="7" name="Slide Number"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="10668000" y="6286500"/><a:ext cx="1047750" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="r"/><a:r><a:rPr lang="en-US" sz="1000"><a:solidFill><a:srgbClr val="7D8EA8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>30 / 30</a:t></a:r><a:endParaRPr lang="en-US" sz="1000"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="8" name="Testing Done"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="428625" y="1476375"/><a:ext cx="2667000" cy="4095750"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="9" name="Testing Done Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="600075" y="1609725"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Testing Done</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="10" name="Testing Done Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="600075" y="1914525"/><a:ext cx="2324100" cy="3543300"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Frontend production build passed</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Backend chatbot files syntax checked</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- API health endpoint available</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Routes and modules reviewed from source</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="11" name="Current Limitations"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="3333750" y="1476375"/><a:ext cx="2667000" cy="4095750"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="12" name="Current Limitations Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="3505200" y="1609725"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Current Limitations</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="13" name="Current Limitations Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="3505200" y="1914525"/><a:ext cx="2324100" cy="3543300"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- No external AI model integration yet</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Manual admin data entry still needed</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Live chat depends on admin availability</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- More automated tests can be added</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="14" name="Future Scope"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6238875" y="1476375"/><a:ext cx="2667000" cy="4095750"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="15" name="Future Scope Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6410325" y="1609725"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Future Scope</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="16" name="Future Scope Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6410325" y="1914525"/><a:ext cx="2324100" cy="3543300"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Voice input and voice reply</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- More languages</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Payment gateway integration</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Mobile app</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Advanced analytics and reminders</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="17" name="Conclusion"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="9144000" y="1476375"/><a:ext cx="2667000" cy="4095750"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="18" name="Conclusion Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="9315450" y="1609725"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Conclusion</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="19" name="Conclusion Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="9315450" y="1914525"/><a:ext cx="2324100" cy="3543300"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- The project is a complete college ERP foundation</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Modular MERN architecture supports expansion</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Student and admin workflows are centralized</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>- Chatbot improves support and navigation</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr>
+</p:sld>

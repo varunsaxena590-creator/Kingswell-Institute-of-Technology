@@ -1,0 +1,6 @@
+
+> katapa-college-backend@1.0.0 start
+> node server.js
+
+MongoDB connected: 127.0.0.1
+✅  Server running on port 5001

@@ -1,0 +1,320 @@
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  FILE: index.css                                            ║
+   ║  PATH: frontend/src/index.css                               ║
+   ║                                                              ║
+   ║  KYA HAI YE FILE?                                            ║
+   ║  → Poore app ki global CSS styles hain.                      ║
+   ║  → Tailwind CSS directives (@tailwind base/components/utils).║
+   ║  → Custom fonts, animations, scrollbar styles yahi hain.    ║
+   ║  → Dark / Light theme CSS variables yahi define hain.       ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+/* =============================================
+   src/index.css — Global Styles for Katapa College
+   ============================================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════
+   THEME CSS VARIABLES — Dark (default) & Light
+   ══════════════════════════════════════════════ */
+:root,
+.dark {
+  --color-bg:        #0a0a0f;
+  --color-bg-100:    #0f0f1a;
+  --color-bg-200:    #141420;
+  --color-bg-300:    #1a1a2e;
+  --color-bg-400:    #16213e;
+  --color-surface:   #1a1a2e;
+  --color-text:      #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-text-faint: #6b7280;
+  --color-border:    #374151;
+  --color-border-light: rgba(255,255,255,0.1);
+  --color-glass-bg:  rgba(10, 10, 15, 0.7);
+  --color-glass-border: rgba(212, 175, 55, 0.15);
+  --color-card-bg:   #1a1a2e;
+  --color-card-border: #374151;
+  --color-input-bg:  #16213e;
+  --color-input-border: #4b5563;
+  --color-shadow:    rgba(0, 0, 0, 0.3);
+  --color-toast-bg:  #1a1a2e;
+  --color-toast-text: #f9fafb;
+  --color-scrollbar-track: #1a1a2e;
+  --color-overlay:   rgba(0, 0, 0, 0.6);
+  --color-gold-text: #d4af37;
+}
+
+.light {
+  --color-bg:        #f8f9fc;
+  --color-bg-100:    #f1f3f8;
+  --color-bg-200:    #e8ebf2;
+  --color-bg-300:    #ffffff;
+  --color-bg-400:    #f0f2f7;
+  --color-surface:   #ffffff;
+  --color-text:      #1a1a2e;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-faint: #9ca3af;
+  --color-border:    #d1d5db;
+  --color-border-light: rgba(0,0,0,0.08);
+  --color-glass-bg:  rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(212, 175, 55, 0.25);
+  --color-card-bg:   #ffffff;
+  --color-card-border: #e5e7eb;
+  --color-input-bg:  #f3f4f6;
+  --color-input-border: #d1d5db;
+  --color-shadow:    rgba(0, 0, 0, 0.08);
+  --color-toast-bg:  #ffffff;
+  --color-toast-text: #1a1a2e;
+  --color-scrollbar-track: #e5e7eb;
+  --color-overlay:   rgba(0, 0, 0, 0.3);
+  --color-gold-text: #a0821a;
+}
+
+/* ── Custom base styles ── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    @apply font-body antialiased;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+}
+
+/* ── Reusable component classes ── */
+@layer components {
+  .btn-gold {
+    @apply bg-gold-gradient text-dark font-semibold px-6 py-3 rounded-lg
+           hover:shadow-gold transition-all duration-300 hover:scale-105
+           active:scale-95 cursor-pointer border-none;
+  }
+
+  .btn-outline-gold {
+    @apply border border-gold bg-transparent px-6 py-3 rounded-lg
+           hover:bg-gold hover:text-dark transition-all duration-300
+           hover:scale-105 active:scale-95 cursor-pointer;
+    color: var(--color-gold-text);
+  }
+
+  .card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    @apply rounded-2xl p-6 hover:border-gold
+           transition-all duration-300 hover:shadow-gold;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-heading font-bold mb-4;
+    color: var(--color-text);
+  }
+
+  .gold-text {
+    @apply text-transparent bg-clip-text bg-gold-gradient;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg px-4 py-3
+           focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold
+           transition-colors duration-200;
+    background: var(--color-input-bg);
+    border: 1px solid var(--color-input-border);
+    color: var(--color-text);
+  }
+  .input-field::placeholder {
+    color: var(--color-text-faint);
+  }
+
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+}
+
+/* ── Utilities ── */
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .glass {
+    backdrop-filter: blur(12px);
+    background: var(--color-glass-bg);
+    border: 1px solid var(--color-glass-border);
+  }
+
+  .chatbot-scroll {
+    overflow-y: scroll !important;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ca8a04 #f1f5f9;
+  }
+
+  .chatbot-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .chatbot-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 999px;
+  }
+
+  .chatbot-scroll::-webkit-scrollbar-thumb {
+    background: #ca8a04;
+    border: 2px solid #f1f5f9;
+    border-radius: 999px;
+  }
+
+  .chatbot-scroll::-webkit-scrollbar-thumb:hover {
+    background: #a16207;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   LIGHT MODE — Override dark Tailwind classes
+   This ensures ALL existing JSX classes adapt
+   without touching any component files.
+   ══════════════════════════════════════════════ */
+
+/* Background overrides */
+.light .bg-dark       { background-color: var(--color-bg) !important; }
+.light .bg-dark-100   { background-color: var(--color-bg-100) !important; }
+.light .bg-dark-200   { background-color: var(--color-bg-200) !important; }
+.light .bg-dark-300   { background-color: var(--color-bg-300) !important; }
+.light .bg-dark-400   { background-color: var(--color-bg-400) !important; }
+
+/* Text overrides */
+.light .text-white    { color: var(--color-text) !important; }
+.light .text-gray-100 { color: var(--color-text) !important; }
+.light .text-gray-200 { color: var(--color-text-secondary) !important; }
+.light .text-gray-300 { color: var(--color-text-secondary) !important; }
+.light .text-gray-400 { color: var(--color-text-muted) !important; }
+.light .text-gray-500 { color: var(--color-text-faint) !important; }
+
+/* Border overrides */
+.light .border-gray-700 { border-color: var(--color-border) !important; }
+.light .border-gray-600 { border-color: var(--color-border) !important; }
+.light .border-gray-800 { border-color: var(--color-card-border) !important; }
+
+/* Semi-transparent bg overrides */
+.light .bg-white\/5    { background-color: rgba(0, 0, 0, 0.03) !important; }
+.light .bg-white\/10   { background-color: rgba(0, 0, 0, 0.05) !important; }
+.light .bg-white\/20   { background-color: rgba(0, 0, 0, 0.07) !important; }
+.light .border-white\/5  { border-color: rgba(0, 0, 0, 0.05) !important; }
+.light .border-white\/10 { border-color: rgba(0, 0, 0, 0.08) !important; }
+.light .border-white\/20 { border-color: rgba(0, 0, 0, 0.1) !important; }
+
+/* Placeholder */
+.light .placeholder-gray-500::placeholder { color: var(--color-text-faint) !important; }
+.light .placeholder-gray-400::placeholder { color: var(--color-text-muted) !important; }
+
+/* Shadow in light */
+.light .shadow-lg { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important; }
+.light .shadow-black\/30 { --tw-shadow-color: rgba(0, 0, 0, 0.06) !important; }
+
+/* Hardcoded hex backgrounds → light equivalents */
+.light .bg-\[\#0a1628\]  { background-color: #f8f9fc !important; }
+.light .bg-\[\#0f1f3d\]  { background-color: #f1f3f8 !important; }
+.light .bg-\[\#1a2742\]  { background-color: #ffffff !important; }
+.light .bg-\[\#0d1b2a\]  { background-color: #f8f9fc !important; }
+.light .from-\[\#0a1628\] { --tw-gradient-from: #f8f9fc !important; }
+.light .to-\[\#0f1f3d\]   { --tw-gradient-to: #f1f3f8 !important; }
+
+/* Gold text — darker in light mode for readability */
+.light .text-gold { color: #a0821a !important; }
+.light .text-gold-light { color: #a0821a !important; }
+
+/* Hover backgrounds */
+.light .hover\:bg-gold\/5:hover  { background-color: rgba(212, 175, 55, 0.08) !important; }
+.light .hover\:bg-gold\/10:hover { background-color: rgba(212, 175, 55, 0.12) !important; }
+.light .hover\:bg-white\/5:hover  { background-color: rgba(0, 0, 0, 0.04) !important; }
+.light .hover\:bg-white\/10:hover { background-color: rgba(0, 0, 0, 0.06) !important; }
+
+/* More hardcoded hex backgrounds from pages */
+.light .bg-\[\#141420\]  { background-color: #f3f4f6 !important; }
+.light .bg-\[\#0f0f1a\]  { background-color: #f8f9fc !important; }
+.light .bg-\[\#0a0a0f\]  { background-color: #f8f9fc !important; }
+.light .bg-\[\#1a1a2e\]  { background-color: #ffffff !important; }
+.light .bg-\[\#16213e\]  { background-color: #f0f2f7 !important; }
+
+/* Hardcoded rgba borders in light mode */
+.light .border-\[rgba\(212\2c 175\2c 55\2c 0\.15\)\] { border-color: rgba(212, 175, 55, 0.3) !important; }
+.light .border-\[rgba\(212\2c 175\2c 55\2c 0\.12\)\] { border-color: rgba(212, 175, 55, 0.25) !important; }
+.light .border-\[rgba\(212\2c 175\2c 55\2c 0\.1\)\]  { border-color: rgba(212, 175, 55, 0.2) !important; }
+.light .border-\[rgba\(255\2c 255\2c 255\2c 0\.08\)\] { border-color: rgba(0, 0, 0, 0.1) !important; }
+
+/* Text on dark that needs to flip */
+.light .text-\[rgba\(255\2c 255\2c 255\2c 0\.6\)\] { color: var(--color-text-muted) !important; }
+.light .text-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\] { color: var(--color-text-faint) !important; }
+.light .placeholder-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\]::placeholder { color: var(--color-text-faint) !important; }
+
+/* Alert backgrounds in light mode */
+.light .bg-\[\#0f2318\] { background-color: #ecfdf5 !important; }
+.light .bg-\[\#2b1111\] { background-color: #fef2f2 !important; }
+
+/* Gradient overrides */
+.light .bg-dark-gradient { background-image: linear-gradient(135deg, #f8f9fc 0%, #e8ebf2 100%) !important; }
+
+/* Hover state overrides for dark backgrounds */
+.light .hover\:bg-dark-300:hover { background-color: rgba(0, 0, 0, 0.05) !important; }
+.light .hover\:bg-dark-300\/30:hover { background-color: rgba(0, 0, 0, 0.03) !important; }
+.light .hover\:bg-dark-300\/40:hover { background-color: rgba(0, 0, 0, 0.04) !important; }
+.light .hover\:bg-dark-300\/50:hover { background-color: rgba(0, 0, 0, 0.05) !important; }
+.light .hover\:bg-dark-400:hover { background-color: rgba(0, 0, 0, 0.06) !important; }
+.light .hover\:bg-dark-100:hover { background-color: rgba(0, 0, 0, 0.03) !important; }
+.light .hover\:bg-dark-200:hover { background-color: rgba(0, 0, 0, 0.04) !important; }
+.light .bg-dark-300\/40 { background-color: rgba(0, 0, 0, 0.04) !important; }
+.light .bg-dark-300\/50 { background-color: rgba(0, 0, 0, 0.05) !important; }
+.light .bg-dark-300\/80 { background-color: rgba(255, 255, 255, 0.9) !important; }
+.light .from-dark-300\/90 { --tw-gradient-from: rgba(255, 255, 255, 0.9) !important; }
+.light .hover\:text-white:hover { color: var(--color-text) !important; }
+
+/* Gray-800 border with opacity */
+.light .border-gray-800\/50 { border-color: rgba(0, 0, 0, 0.08) !important; }
+.light .border-gray-800 { border-color: var(--color-card-border) !important; }
+
+/* Gray bg overrides */
+.light .bg-gray-700 { background-color: #d1d5db !important; }
+.light .bg-gray-800 { background-color: #e5e7eb !important; }
+.light .bg-gray-800\/50 { background-color: rgba(229, 231, 235, 0.5) !important; }
+.light .bg-gray-900 { background-color: #f3f4f6 !important; }
+
+/* Smooth theme switch transition */
+.light *,
+.dark * {
+  transition: background-color 0.25s ease, color 0.15s ease, border-color 0.2s ease;
+}

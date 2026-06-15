@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr>
+      <p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>
+      <p:sp>
+  <p:nvSpPr><p:cNvPr id="2" name="Background"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="12192000" cy="6858000"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="07111f"/></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="3" name="Top Accent"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="12192000" cy="95250"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="4" name="Section"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="514350" y="209550"/><a:ext cx="4000500" cy="266700"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1200" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Architecture</a:t></a:r><a:endParaRPr lang="en-US" sz="1200"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="5" name="Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="514350" y="590550"/><a:ext cx="7239000" cy="666750"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="3100" b="1"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill><a:latin typeface="Aptos Display"/></a:rPr><a:t>System Architecture</a:t></a:r><a:endParaRPr lang="en-US" sz="3100"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="6" name="Subtitle"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="533400" y="1200150"/><a:ext cx="7810500" cy="438150"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="A7B4C8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>High-level data flow from browser to database</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="7" name="Slide Number"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="10668000" y="6286500"/><a:ext cx="1047750" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="r"/><a:r><a:rPr lang="en-US" sz="1000"><a:solidFill><a:srgbClr val="7D8EA8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>07 / 30</a:t></a:r><a:endParaRPr lang="en-US" sz="1000"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="8" name="React Frontend"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="666750" y="1714500"/><a:ext cx="2667000" cy="1143000"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="9" name="React Frontend Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="838200" y="1847850"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>React Frontend</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="10" name="React Frontend Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="838200" y="2152650"/><a:ext cx="2324100" cy="590550"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Pages, forms, dashboards, chatbot widget, protected routes</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="11" name="Express API"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="4762500" y="1714500"/><a:ext cx="2667000" cy="1143000"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="12" name="Express API Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="4933950" y="1847850"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Express API</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="13" name="Express API Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="4933950" y="2152650"/><a:ext cx="2324100" cy="590550"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>REST endpoints, auth middleware, validation, controllers</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="14" name="MongoDB"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="8858250" y="1714500"/><a:ext cx="2667000" cy="1143000"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="15" name="MongoDB Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="9029700" y="1847850"/><a:ext cx="2324100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>MongoDB</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="16" name="MongoDB Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="9029700" y="2152650"/><a:ext cx="2324100" cy="590550"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Students, fees, results, notices, messages, FAQs and more</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="17" name="Authentication Layer"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="2000250" y="3714750"/><a:ext cx="3429000" cy="1238250"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="18" name="Authentication Layer Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="2171700" y="3848100"/><a:ext cx="3086100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Authentication Layer</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="19" name="Authentication Layer Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="2171700" y="4152900"/><a:ext cx="3086100" cy="685800"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>JWT token stored by frontend and attached by Axios interceptor</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="20" name="Admin and Student Modules"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6762750" y="3714750"/><a:ext cx="3429000" cy="1238250"/></a:xfrm><a:prstGeom prst="roundRect"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="101E33"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="223A5D"/></a:solidFill></a:ln></p:spPr>
+  
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="21" name="Admin and Student Modules Title"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6934200" y="3848100"/><a:ext cx="3086100" cy="228600"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1300" b="1"><a:solidFill><a:srgbClr val="D4AF37"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Admin and Student Modules</a:t></a:r><a:endParaRPr lang="en-US" sz="1300"/></a:p></p:txBody>
+</p:sp>
+<p:sp>
+  <p:nvSpPr><p:cNvPr id="22" name="Admin and Student Modules Body"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr>
+  <p:spPr><a:xfrm><a:off x="6934200" y="4152900"/><a:ext cx="3086100" cy="685800"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr>
+  <p:txBody><a:bodyPr wrap="square" lIns="38100" tIns="38100" rIns="38100" bIns="38100"><a:normAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn="l"/><a:r><a:rPr lang="en-US" sz="1400"><a:solidFill><a:srgbClr val="E7EEF8"/></a:solidFill><a:latin typeface="Aptos"/></a:rPr><a:t>Role-based routes split workflows between admin operations and student self-service</a:t></a:r><a:endParaRPr lang="en-US" sz="1400"/></a:p></p:txBody>
+</p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr>
+</p:sld>

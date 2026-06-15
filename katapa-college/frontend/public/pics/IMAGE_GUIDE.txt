@@ -1,0 +1,76 @@
+# 📸 PICS FOLDER — Image Guide for Zentrix College Website
+# =========================================================
+#
+# Apni images neeche diye gaye naam se is folder mein daalo.
+# Website automatically in images ko sahi jagah dikhayegi.
+#
+# ⚠️ IMPORTANT: Image names EXACTLY same rakhna (lowercase, with extension)
+#
+# ─────────────────────────────────────────────────────────
+# LOGO (Used in: Navbar, Footer, Login, Register, Admin Sidebar)
+# ─────────────────────────────────────────────────────────
+#   logo.png           — College ka main logo (PNG/SVG, ~200x200px recommended)
+#
+# ─────────────────────────────────────────────────────────
+# FACULTY PHOTOS (Used in: Faculty page — Meet the Team)
+# ─────────────────────────────────────────────────────────
+#   faculty-jk.jpg     — Prof. James Kariuki (Dean of Technology)
+#   faculty-ao.jpg     — Dr. Amina Odhiambo (Head of Business School)
+#   faculty-sw.jpg     — Dr. Samuel Waweru (Head of Health Sciences)
+#   faculty-ga.jpg     — Ms. Grace Achieng (Senior Lecturer)
+#   faculty-po.jpg     — Mr. Peter Otieno (Head of Finance)
+#   faculty-fm.jpg     — Dr. Fatuma Mwangi (Senior Lecturer, Education)
+#   faculty-cm.jpg     — Eng. Collins Mutua (Head of Engineering)
+#   faculty-jn.jpg     — Ms. Joyce Njoki (Registrar)
+#
+# ─────────────────────────────────────────────────────────
+# GALLERY PHOTOS (Used in: Gallery page — replace Picsum placeholders)
+# ─────────────────────────────────────────────────────────
+#   gallery-graduation.jpg   — Graduation Ceremony photo
+#   gallery-science-lab.jpg  — Science Lab photo
+#   gallery-sports-day.jpg   — Sports Day photo
+#   gallery-library.jpg      — Library interior
+#   gallery-campus-garden.jpg— Campus Garden / grounds
+#   gallery-tech-expo.jpg    — Tech Expo / exhibition event
+#   gallery-cultural-week.jpg— Cultural Week festivities
+#   gallery-computer-lab.jpg — Computer Lab
+#   gallery-football.jpg     — Football Finals / sports match
+#   gallery-seminar-hall.jpg — Seminar Hall
+#   gallery-hostel.jpg       — Hostel Block
+#   gallery-main-entrance.jpg— College Main Entrance / gate
+#
+# ─────────────────────────────────────────────────────────
+# COURSE IMAGES (Used in: Course cards on Home & Courses page)
+# ─────────────────────────────────────────────────────────
+#   course-computer-science.jpg  — BSc Computer Science
+#   course-business.jpg          — Diploma in Business Administration
+#   course-nursing.jpg           — BSc Nursing
+#   course-it.jpg                — Diploma in Information Technology
+#   course-accounting.jpg        — Certificate in Accounting
+#   course-mba.jpg               — MBA programme
+#   course-education.jpg         — BSc Education
+#   course-engineering.jpg       — BSc Civil Engineering
+#   course-arts.jpg              — Certificate in Creative Arts
+#
+# ─────────────────────────────────────────────────────────
+# TESTIMONIAL STUDENT PHOTOS (Used in: Home page testimonials)
+# ─────────────────────────────────────────────────────────
+#   student-amara.jpg    — Amara Osei (BSc Computer Science)
+#   student-fatima.jpg   — Fatima Hassan (Diploma in Business)
+#   student-david.jpg    — David Mutua (BSc Nursing)
+#
+# ─────────────────────────────────────────────────────────
+# ABOUT PAGE (Used in: About page hero & sections)
+# ─────────────────────────────────────────────────────────
+#   about-hero.jpg       — Campus wide/aerial shot (hero banner)
+#   about-campus.jpg     — General campus building photo
+#
+# =========================================================
+# Image tips:
+#   - Logo: PNG with transparent background, square, ~200x200px
+#   - Faculty: Square crop, ~400x400px, professional headshots
+#   - Gallery: Landscape, at least 800x600px
+#   - Courses: Landscape, ~800x500px
+#   - Testimonials: Square crop, ~200x200px
+#   - About: Wide landscape, at least 1200x600px
+# =========================================================

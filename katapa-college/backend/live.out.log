@@ -1,0 +1,10 @@
+
+> katapa-college-backend@1.0.0 start
+> node server.js
+
+MongoDB connected: 127.0.0.1
+✅  Server running on port 5001
+[EMAIL SKIPPED — not configured] To: student@kingswellinstitute.ac.ke | Subject: Congratulations! Your Admission is Confirmed — Kingswell College
+[EMAIL SKIPPED — not configured] To: student@kingswellinstitute.ac.ke | Subject: Admission Application Update — Kingswell College
+[EMAIL SKIPPED — not configured] To: gracyrathore1008@gmail.com | Subject: Application Received — M.Tech: Master of Technology | Kingswell College
+[EMAIL SKIPPED — not configured] To: gracyrathore1008@gmail.com | Subject: Congratulations! Your Admission is Confirmed — Kingswell College
