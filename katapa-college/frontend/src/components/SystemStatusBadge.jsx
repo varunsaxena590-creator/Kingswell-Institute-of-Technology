@@ -37,7 +37,7 @@ export default function SystemStatusBadge() {
 
     const checkHealth = async () => {
       try {
-        const res = await fetch(`${BASE_URL}/health`, { cache: 'no-store' });
+        const res = await fetch(`${BASE_URL}/api/health`, { cache: 'no-store' });
         const data = await res.json().catch(() => ({}));
         if (!active) return;
 
