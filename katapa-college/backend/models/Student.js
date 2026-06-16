@@ -31,11 +31,10 @@ const studentSchema = new mongoose.Schema(
     country: { type: String, required: [true, 'Country is required'], default: 'Kenya' },
 
     // Academic Information
-    courseApplied: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Course',
-      required: [true, 'Course selection is required'],
-    },
+  courseApplied: {
+  type: String,
+  required: [true, 'Course selection is required'],
+},
     previousSchool: { type: String, trim: true },
     previousGrade: { type: String, trim: true },
 
